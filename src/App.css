@@ -1,82 +1,43 @@
-.App-window {
+/* Reset and full viewport */
+html, body {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: 100%; 
+  height: 100vh;
+  overflow: hidden; /* Prevent scrollbars on main page */
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+/* Container fills viewport */
+.App-window {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   border: 2px solid #444;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   background: #fff;
-  font-family: Arial, sans-serif;
-  overflow: hidden; /* Prevent global overflow */
+  overflow: hidden; /* Prevent scrollbars around iframe */
   margin: 0 auto;
 }
 
-.App-titlebar {
-  background: #222;
-  color: #fff;
-  height: 35px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-  user-select: none;
-  flex-shrink: 0;
-}
-
-.App-title {
-  font-weight: bold;
-}
-
-.App-controls {
-  display: flex;
-  gap: 5px;
-}
-
-.App-btn {
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 18px;
-  line-height: 1;
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  text-align: center;
-}
-
-.App-btn:hover {
-  background: #555;
-  border-radius: 3px;
-}
-
-/* Make iframe scrollable when content overflows */
+/* iframe fills all remaining space inside App-window */
 .App-iframe {
   flex-grow: 1;
   width: 100%;
+  height: 100%;
   border: none;
-  overflow: auto;
+  display: block;
 }
 
-.App-minimized-text {
-  padding: 10px;
-  text-align: center;
-  color: #666;
-}
-
+/* Preloader: center the spinner gif */
 .Preloader {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background: #fff;
-}
-
-.App-closed {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .Preloader img {
