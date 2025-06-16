@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -22,8 +21,13 @@ function App() {
   }
 
   return (
-    <div className="App">
-      
+    <div className="App-window">
+      <iframe
+        title="Embedded Website"
+        src="https://app.althakeel.com/"
+        frameBorder="0"
+        className="App-iframe"
+      />
     </div>
   );
 }
